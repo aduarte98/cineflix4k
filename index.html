@@ -242,9 +242,9 @@
             modalVoteAverage.textContent = `Nota: ${data.vote_average} (${data.vote_count})`; // Exibe a nota
             let imdbId = data.imdb_id;
             // Adiciona o vídeo ao modal
-            iframeContainer.innerHTML = `<iframe id="videoIframe" src="https://superflixapi.top/filme/${movie.id}" scrolling="no" frameborder="0" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" width="100%" height="350"></iframe>`;
+            iframeContainer.innerHTML = `<iframe id="videoIframe" src="https://superflixapi.dev/filme/${movie.id}" scrolling="no" frameborder="0" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" width="100%" height="350"></iframe>`;
             document.getElementById('option1').addEventListener('click', () => {
-                const link = `https://superflixapi.top/filme/${movie.id}`;
+                const link = `https://superflixapi.dev/filme/${movie.id}`;
                 // Define o conteúdo do iframe com a URL da opção 1
                 iframeContainer.innerHTML = `<iframe id="videoIframe" src="${link}" scrolling="no" frameborder="0" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" width="100%" height="350"></iframe>`;
             });
