@@ -236,10 +236,10 @@
             modalTitle.textContent = data.name;
             modalOverview.textContent = data.overview;
             modalVoteAverage.textContent = `Nota: ${data.vote_average} (${data.vote_count})`;
-            iframeContainer.innerHTML = `<iframe id="videoIframe" src="https://superflixapi.top/serie/${serie.id}" scrolling="no" frameborder="0" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" width="100%" height="350"></iframe>`;
+            iframeContainer.innerHTML = `<iframe id="videoIframe" src="https://superflixapi.dev/serie/${serie.id}" scrolling="no" frameborder="0" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" width="100%" height="350"></iframe>`;
 
             document.getElementById('option1').addEventListener('click', () => {
-                const link = `https://superflixapi.top/serie/${serie.id}`;
+                const link = `https://superflixapi.dev/serie/${serie.id}`;
                 iframeContainer.innerHTML = `<iframe id="videoIframe" src="${link}" scrolling="no" frameborder="0" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" width="100%" height="350"></iframe>`;
             });
             document.getElementById('option2').addEventListener('click', () => {
