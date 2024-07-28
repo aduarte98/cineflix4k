@@ -1,0 +1,43 @@
+/* Estilos personalizados */
+.container-tv {
+    padding: 20px;
+    background-color: #1d1d1d;
+    color: white;
+}
+
+.titulo-tv {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.card {
+    background-color: #1d1d1d;
+    color: white;
+}
+
+.card-img-top1 {
+    width: 100%;
+    height: auto;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+
+.card-text {
+    font-size: 0.9rem;
+}
+
+a {
+    text-decoration: none; /* Remove o sublinhado */
+}
+

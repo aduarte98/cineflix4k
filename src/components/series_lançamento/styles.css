@@ -1,0 +1,117 @@
+/* Estilo geral do carrossel de séries */
+.carousel-container2 {
+    width: 100%;
+    max-width: 1300px; /* Altere para o mesmo valor do carrossel de filmes */
+    margin: 0 auto;
+    padding-top: 50px;
+    user-select: none; /* Previene a seleção de texto */
+    margin-bottom: 20px; /* Adiciona espaço abaixo do carrossel, se necessário */
+}
+
+.movie-row2 {
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+    flex-wrap: wrap; /* Adiciona flex-wrap para permitir que os itens se reorganizem em telas menores */
+}
+
+.movie-item2 {
+    flex: 1 1 16.66%; /* Ajuste para o mesmo número de itens por linha que o carrossel de filmes */
+    box-sizing: border-box;
+    padding: 5px;
+    position: relative;
+    margin: 5px; /* Adiciona margem para espaçamento entre os itens */
+}
+
+.carrossel-image2 {
+    width: 100%;
+    height: 300px; /* Ajuste a altura para corresponder ao carrossel de filmes */
+    object-fit: cover;
+}
+
+.movie-item2 h3 {
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 17px; /* Ajuste o tamanho da fonte para corresponder ao carrossel de filmes */
+    font-weight: 800;
+    padding: 10px;
+    z-index: 1; /* Certifique-se de que o título fique sobre a imagem */
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    width: 96%;
+}
+
+.titulo {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    padding-left: 10px;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 1200px) {
+    .movie-item2 {
+        flex: 1 1 22%; /* Ajustado para corresponder ao carrossel de filmes */
+    }
+}
+
+@media (max-width: 992px) {
+    .movie-item2 {
+        flex: 1 1 30%; /* Ajustado para corresponder ao carrossel de filmes */
+    }
+}
+
+@media (max-width: 768px) {
+    .movie-item2 {
+        flex: 1 1 45%; /* Ajustado para corresponder ao carrossel de filmes */
+    }
+
+    .titulo {
+        font-size: 24px;
+    }
+
+    .movie-item2 h3 {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-container2 {
+        padding-top: 20px;
+    }
+
+    .movie-row2 {
+        display: flex;
+        justify-content: center; /* Centraliza o item */
+        flex-wrap: nowrap; /* Impede a quebra de linha para manter apenas um item visível */
+        overflow: hidden; /* Oculta itens fora da visualização */
+    }
+
+    .movie-item2 {
+        flex: 0 0 100%; /* Faz com que o item ocupe toda a largura disponível */
+        padding: 0;
+    }
+
+    .carrossel-image2 {
+        height: 300px; /* Ajuste a altura conforme necessário */
+    }
+
+    .movie-item2 h3 {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .titulo {
+        font-size: 20px;
+        padding-left: 0;
+    }
+    .movie-item2 h3{
+        width: 100%;
+        left: 0px;
+        bottom: -3px;
+        font-size: 17px;
+    }
+}

@@ -1,0 +1,153 @@
+*{
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 800;
+}
+
+
+.container-filme{
+background-color: #1d1d1d;
+color: white;
+}
+
+.overlay {
+  position: absolute;
+  top: 80%;
+  left: 0;
+  width: 84%;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+
+.overlay:hover {
+  opacity: 1;
+}
+
+.overlay h5 {
+  margin: 0;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 10px;
+  z-index: 1;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 800;
+}
+.custom-pagination .page-item .page-link {
+  background-color: #1a1a1a; /* Cor de fundo padrão */
+  border-color: #1a1a1a;
+  color: #FFF;
+  margin: 0 1px;
+}
+
+.custom-pagination .page-item.active .page-link {
+  background-color: #FFF; /* Cor de fundo quando o item está ativo */
+  border-color: #FFF; /* Cor da borda quando o item está ativo */
+  color: black; /* Cor do texto quando o item está ativo */
+}
+
+.custom-pagination .page-link {
+  color: #007bff; /* Cor do texto padrão */
+}
+
+.custom-pagination .page-link:hover {
+  background-color: #e9ecef; /* Cor de fundo ao passar o mouse */
+  color: black;
+}
+
+.card-img-top{
+  cursor: pointer;
+  width: 90%;
+  height: 94%;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.row {
+margin-left: 10%;
+margin-right: 10%;
+}
+
+.col-6, .col-md-4, .col-lg-3 {
+padding-left: 0px;
+padding-right: 0px;
+}
+
+.custom-select {
+appearance: none;
+-webkit-appearance: none;
+-moz-appearance: none;
+background: url('data:image/svg+xml;utf8,<svg fill="%23000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 12px center;
+background-color: #fff;
+border: 1px solid #ccc;
+padding-right: 30px; /* Espaço para a seta */
+border-radius: 4px;
+font-size: 17px;
+width: 200px;
+}
+
+.optionValor{
+text-align: start;
+}
+
+
+@media (max-width: 400px) {
+.custom-select{
+  padding-right: 16px;
+  background: url('data:image/svg+xml;utf8,<svg fill="%23000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right -1px center;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 17px;
+  width: 200px;
+}
+}
+
+@media (max-width: 768px) {
+  .custom-pagination {
+    display: flex;
+    justify-content: center; /* Centraliza a paginação */
+    flex-wrap: wrap; /* Permite que a paginação quebre em várias linhas, se necessário */
+  }
+
+  .custom-pagination .page-item {
+    margin: 0 -2px; /* Ajusta o espaçamento entre os itens */
+  }
+
+  .custom-pagination .page-link {
+    font-size: 14px; /* Reduz o tamanho da fonte para telas menores */
+    padding: 6px 10px; /* Ajusta o padding para adequar o tamanho dos botões */
+  }
+
+  /* Excluir o display: none; do nav */
+  nav {
+    display: block; /* Certifica-se de que a navegação é exibida */
+  }
+}
+
+/* Ajustes para telas de até 400px */
+@media (max-width: 400px) {
+  .custom-select {
+    padding-right: 16px;
+    background: url('data:image/svg+xml;utf8,<svg fill="%23000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right -1px center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 17px;
+    width: 200px;
+  }
+
+  .custom-pagination .page-link {
+    font-size: 12px; /* Reduz ainda mais o tamanho da fonte para telas muito pequenas */
+    padding: 4px 8px; /* Ajusta o padding para tamanhos menores */
+  }
+}

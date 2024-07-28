@@ -1,0 +1,119 @@
+.carrossel-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0; 
+    top: 0;
+    cursor: pointer;
+}
+
+.carrossel-image {
+    width: 100%;
+    max-height: 600px;
+    object-fit: center;
+}
+
+.carousel-indicators {
+    display: none;
+}
+
+.carousel-caption {
+    background-color: transparent; /* Remove o fundo da caption */
+}
+
+h5 {
+    background-color: transparent;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.carrossel-container,
+.carrossel-container * {
+    user-select: none; /* Previene a seleção de texto */
+}
+
+.carrossel-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: black;
+    padding-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: opacity 0.6s ease-in-out;
+}
+
+.carrossel-overlay h5 {
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 700;
+    width: 100%;
+    color: #fff;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+.carrossel-overlay p {
+    font-size: 1rem;
+    padding-bottom: 10px;
+    font-weight: 800;
+    color: white;
+}
+
+.carrossel-overlay button {
+    background-color: #2AB2C7;
+    font-size: 1rem;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 60px;
+    height: 100%;
+    top: 0;
+    background-color: black;
+    opacity: 0.5; 
+}
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 1200px) {
+    .carrossel-image {
+        max-height: 500px;
+    }
+
+    .carrossel-overlay h5 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 992px) {
+    .carrossel-image {
+        max-height: 450px;
+    }
+
+    .carrossel-overlay h5 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .carrossel-image {
+        max-height: 400px;
+    }
+
+    .carrossel-overlay h5 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .carrossel-image {
+        max-height: 350px;
+    }
+
+    .carrossel-overlay h5 {
+        font-size: 12px;
+    }
+}

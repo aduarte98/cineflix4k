@@ -1,0 +1,309 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background-color: #1d1d1d;
+}
+
+.conteudo-page {
+  position: relative;
+  padding: 0;
+  width: 100%;
+  background-color: #1d1d1d;
+  min-height: 100vh; /* Garante que a página ocupe toda a altura da viewport */
+}
+
+.background-trailer {
+  position: relative;
+  width: 100%; /* Ocupa toda a largura da viewport */
+  height: 500px; /* Ajuste conforme necessário */
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.background-trailer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.938),rgba(0, 0, 0, 0.438),rgba(0, 0, 0, 0.089), rgba(0, 0, 0, 0), transparent);
+  z-index: 1; /* Certifique-se de que o z-index seja menor que o da .content-info */
+  object-fit: center;
+  backdrop-filter: blur(10px);
+  clip-path: polygon(0 0, 28% 0, 61% 100%, 0% 100%);
+}
+
+.content-info {
+  position: absolute;
+  top: 100px;
+  width: 500px;
+  left: 20px;
+  z-index: 2; /* Certifique-se de que z-index seja maior que o da imagem de fundo */
+  text-align: left;
+  color: white;
+}
+
+.content-cover {
+  width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.content-synopsis {
+  margin-bottom: 10px;
+}
+
+.rating {
+  margin-bottom: 10px;
+}
+
+.genres {
+  margin-bottom: 10px;
+}
+
+.genre {
+  display: inline-block;
+  margin-right: 5px;
+  border: 1px solid white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.duration {
+  margin-bottom: 10px;
+}
+
+.recommended-carousel {
+  margin-top: 20px;
+}
+
+.iframe-and-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.iframe-container {
+  flex: 1;
+  margin-left: 20px;
+  margin-right: 100px;
+  border: none;
+  border-radius: 2px;
+}
+
+.button-container {
+  margin-right: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 5px;
+  border: none;
+  width: 200px;
+  height: 360px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.botao-Op{
+  width: 200px;
+  height: 90px;
+  border: none;
+  background-color: black;
+  border-radius: 4px;
+  color: white;
+  text-align: end;
+  padding-right: 50px;
+}
+
+.botao-Op-Serie{
+  width: 200px;
+  height: 50px;
+  border: none;
+  background-color: black;
+  border-radius: 4px;
+  margin: 5px;
+  color: white;
+  text-align: end;
+  padding-right: 50px;
+}
+
+.botao-Op1{
+  width: 200px;
+  border: none;
+  background-color: black;
+  border-radius: 4px;
+  margin: 5px;
+  color: white;
+  text-align: end;
+  text-decoration: none;
+}
+
+.botao-Op1:hover{
+  color: #007bff;
+  text-decoration: none;
+}
+
+.botao-Op:hover{
+  color: #007bff;
+  text-decoration: none;
+}
+
+.botao-Op-Serie:hover{
+  color: #007bff;
+  text-decoration: none;
+}
+
+
+.recommendations {
+  padding: 20px;
+}
+
+.recommendation-cards {
+  display: flex;
+  flex-wrap: nowrap; /* Mantém as cartas em linha, mesmo que elas ultrapassem a largura da tela */
+  gap: 15px;
+  overflow-x: auto; /* Permite rolar horizontalmente se necessário */
+}
+
+.recommendation-card {
+  position: relative;
+  min-width: 200px;
+  height: 350px; 
+  flex: 1 0 auto;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.recommendation-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recommendation-card h4 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7); 
+  color: white;
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.titulo{
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  padding-left: 10px;
+  color: white;
+}
+
+h6{
+  color: white;
+  padding: 150px 0 0 100px;
+  font-size: 30px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .background-trailer {
+    height: 450px;
+  }
+
+  h6{
+    padding: 20px 0 0 5px;
+  }
+
+  .content-info {
+    width: 90%;
+    left: 5%;
+    top: 70px;
+    padding: 0 10px;
+  }
+
+  .botao-Op1, .botao-Op-Serie {
+    width: 200px;
+    height: 50px;
+  }
+
+  .iframe-and-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .iframe-container {
+    height: 200px;
+    width: 90%;
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 10px; /* Espaçamento entre os botões */
+    margin-top: 20px;
+    width: 100%;
+    height: 300px;
+  }
+
+  .recommendation-cards {
+    flex-wrap: wrap;
+  }
+
+  .recommendation-card {
+    min-width: 150px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .background-trailer {
+    height: 550px;
+  }
+
+  .content-info {
+    width: 100%;
+    left: 0;
+    top: 50px;
+  }
+
+  .iframe-container {
+    height: 200px;
+    width: 90%; /* Faz com que o iframe ocupe toda a largura disponível */
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+  .botao-Op1, .botao-Op-Serie {
+    width: 200px;
+    height: 90px;
+  }
+
+  .button-container {
+    width: 50%;
+    margin-left: 60px;
+  }
+
+  .recommendation-cards {
+    flex-wrap: wrap;
+  }
+
+  .recommendation-card {
+    min-width: 100px;
+    height: 200px;
+  }
+}

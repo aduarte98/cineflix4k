@@ -1,0 +1,71 @@
+footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px; /* Adiciona padding para melhor espaçamento em telas menores */
+    background-color: #000; /* Adiciona uma cor de fundo para melhor contraste */
+}
+
+span {
+    color: #fff;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    margin: 5px 0; /* Adiciona margem para melhor espaçamento */
+}
+
+.footer-navigation {
+    display: none;
+}
+
+.explicacao {
+    font-size: 15px;
+    max-width: 90%; /* Limita a largura para melhor leitura em telas menores */
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+    color: aliceblue;
+    cursor: pointer;
+    font-size: 19px;
+    transition: .5s;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    margin: 5px 0; /* Adiciona margem para melhor espaçamento */
+}
+
+#logo {
+    width: 100%;
+    max-width: 250px;
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    .footer-navigation {
+        display: block;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .explicacao {
+        font-size: 14px; /* Ajusta o tamanho da fonte para telas menores */
+    }
+
+    span {
+        font-size: 14px; /* Ajusta o tamanho da fonte para telas menores */
+    }
+
+    li {
+        font-size: 17px; /* Ajusta o tamanho da fonte para telas menores */
+    }
+}

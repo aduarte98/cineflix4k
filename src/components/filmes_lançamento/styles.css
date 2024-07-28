@@ -1,0 +1,114 @@
+.carousel-container1 {
+    width: 100%;
+    max-width: 1300px; /* Altere para o mesmo valor do carrossel de séries */
+    margin: 0 auto;
+    padding-top: 50px;
+    user-select: none; /* Previene a seleção de texto */
+    margin-bottom: 20px;
+}
+
+.movie-row1 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Adiciona flex-wrap para permitir que os itens se reorganizem em telas menores */
+}
+
+.movie-item1 {
+    flex: 1 1 16.66%; /* Ajuste para o mesmo número de itens por linha que o carrossel de séries */
+    box-sizing: border-box;
+    padding: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.carrossel-image1 {
+    width: 100%;
+    height: 300px; /* Ajuste a altura para corresponder ao carrossel de séries */
+    object-fit: cover;
+}
+
+.movie-item1 h3 {
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 17px; /* Ajuste o tamanho da fonte para corresponder ao carrossel de séries */
+    font-weight: 800;
+    padding: 10px;
+    z-index: 1; /* Certifique-se de que o título fique sobre a imagem */
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    width: 96%;
+}
+
+.titulo {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    padding-left: 10px;
+}
+
+@media (max-width: 1200px) {
+    .movie-item1 {
+        flex: 1 1 22%; /* 4 itens por linha em telas grandes */
+    }
+}
+
+@media (max-width: 992px) {
+    .movie-item1 {
+        flex: 1 1 30%; /* 3 itens por linha em tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .movie-item1 {
+        flex: 1 1 45%; /* 2 itens por linha em tablets verticais */
+    }
+
+    .titulo {
+        font-size: 24px;
+    }
+
+    .movie-item1 h3 {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-container1 {
+        padding-top: 20px;
+    }
+
+    .movie-row1 {
+        display: flex;
+        justify-content: center; /* Centraliza o item */
+        flex-wrap: nowrap; /* Impede a quebra de linha para manter apenas um item visível */
+        overflow: hidden; /* Oculta itens fora da visualização */
+    }
+
+    .movie-item1 {
+        flex: 0 0 100%; /* Faz com que o item ocupe toda a largura disponível */
+        padding: 0;
+    }
+
+    .carrossel-image1 {
+        height: 300px; /* Ajuste a altura conforme necessário */
+    }
+
+    .movie-item1 h3 {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .titulo {
+        font-size: 20px;
+        padding-left: 0;
+    }
+    .movie-item1 h3{
+        width: 100%;
+        left: 0px;
+        bottom: -8px;
+        font-size: 17px;
+    }
+}

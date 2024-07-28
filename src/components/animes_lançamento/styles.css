@@ -1,0 +1,108 @@
+.carousel-container3 {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-top: 50px;
+    user-select: none; /* Previene a seleção de texto */
+    margin-bottom: 20px;
+}
+
+.series-row3 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha em telas menores */
+}
+
+.series-item3 {
+    flex: 1 1 16.66%; /* Flex-basis para 6 itens por linha */
+    box-sizing: border-box;
+    padding: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.series-item3 img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.titulo {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    padding-left: 10px;
+}
+
+.control-dots {
+    display: none;
+}
+
+.carousel-status {
+    display: none;
+}
+
+h1 {
+    color: white;
+}
+
+.series-item3 h3 {
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 17px;
+    font-weight: 800;
+    padding: 10px;
+    z-index: 1;
+    text-align: center;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    width: 96%;
+}
+
+.carousel-container3 .carousel .slide img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 1200px) {
+    .series-item3 {
+        flex: 1 1 22%; /* 4 itens por linha em telas grandes */
+    }
+}
+
+@media (max-width: 992px) {
+    .series-item3 {
+        flex: 1 1 30%; /* 3 itens por linha em tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .series-item3 {
+        flex: 1 1 45%; /* 2 itens por linha em tablets verticais */
+    }
+}
+
+@media (max-width: 576px) {
+    .series-item3 {
+        flex: 1 1 100%; /* 1 item por linha em telas pequenas */
+    }
+
+    .titulo {
+        font-size: 24px;
+        padding-left: 0;
+    }
+
+    .btn.btn-secondary.div-secundaria {
+        font-size: 14px;
+    }
+    .series-item3 h3{
+        width: 99%;
+        left: 5px;
+    }
+}

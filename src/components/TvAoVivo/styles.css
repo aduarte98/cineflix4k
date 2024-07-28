@@ -1,0 +1,117 @@
+/* Estilo geral do carrossel de TV ao Vivo */
+.carousel-container4 {
+  width: 100%;
+  max-width: 1300px; /* Altere para o mesmo valor dos outros carrosséis */
+  margin: 0 auto;
+  padding-top: 50px;
+  user-select: none; /* Previene a seleção de texto */
+  margin-bottom: 20px; /* Ajuste conforme necessário */
+}
+
+.movie-row4 {
+  display: flex;
+  justify-content: space-around;
+  cursor: pointer;
+  flex-wrap: wrap; /* Adiciona flex-wrap para permitir que os itens se reorganizem em telas menores */
+}
+
+.movie-item4 {
+  flex: 1 1 16.66%; /* Ajuste para o mesmo número de itens por linha que os outros carrosséis */
+  box-sizing: border-box;
+  padding: 5px;
+  position: relative;
+  margin: 5px; /* Adiciona margem para espaçamento entre os itens */
+}
+
+.carrossel-image4 {
+  width: 100%;
+  height: 300px; /* Ajuste a altura para corresponder ao carrossel de filmes e séries */
+  object-fit: cover;
+}
+
+.movie-item4 h3 {
+  position: absolute;
+  bottom: 0;
+  left: 5px;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Ajuste a cor de fundo para corresponder aos outros carrosséis */
+  color: #fff;
+  font-size: 17px; /* Ajuste o tamanho da fonte para corresponder aos outros carrosséis */
+  font-weight: 800;
+  padding: 10px;
+  z-index: 1; /* Certifique-se de que o título fique sobre a imagem */
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  width: 96%;
+}
+
+.titulo {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  padding-left: 10px;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 1200px) {
+  .movie-item4 {
+    flex: 1 1 22%; /* Ajustado para corresponder ao carrossel de filmes e séries */
+  }
+}
+
+@media (max-width: 992px) {
+  .movie-item4 {
+    flex: 1 1 30%; /* Ajustado para corresponder ao carrossel de filmes e séries */
+  }
+}
+
+@media (max-width: 768px) {
+  .movie-item4 {
+    flex: 1 1 45%; /* Ajustado para corresponder ao carrossel de filmes e séries */
+  }
+
+  .titulo {
+    font-size: 24px;
+  }
+
+  .movie-item4 h3 {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-container4 {
+    padding-top: 20px;
+  }
+
+  .movie-row4 {
+    display: flex;
+    justify-content: center; /* Centraliza o item */
+    flex-wrap: nowrap; /* Impede a quebra de linha para manter apenas um item visível */
+    overflow: hidden; /* Oculta itens fora da visualização */
+  }
+
+  .movie-item4 {
+    flex: 0 0 100%; /* Faz com que o item ocupe toda a largura disponível */
+    padding: 0;
+  }
+
+  .carrossel-image4 {
+    height: 300px; /* Ajuste a altura conforme necessário */
+  }
+
+  .movie-item4 h3 {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .titulo {
+    font-size: 20px;
+    padding-left: 0;
+  }
+  .movie-item4 h3{
+    width: 100%;
+    left: 0px;
+    bottom: -3px;
+    font-size: 17px;
+  }
+}
