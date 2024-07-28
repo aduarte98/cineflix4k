@@ -1,7 +1,9 @@
+/* Estilo global */
 * {
   font-family: Roboto, Helvetica, Arial, sans-serif;
 }
 
+/* Cabeçalho e barra de navegação */
 .header-padding {
   height: 80px;
   font-size: 20px;
@@ -14,15 +16,18 @@
   backdrop-filter: blur(6px);
 }
 
+/* Contêiner de pesquisa */
 .search-container {
   position: relative;
 }
 
+/* Ícone de pesquisa */
 .search-icon {
   cursor: pointer;
   margin-left: 1rem;
 }
 
+/* Barra de pesquisa */
 .search-bar {
   width: 100%;
   max-width: 300px; /* Limita a largura da barra de pesquisa */
@@ -59,6 +64,7 @@
   background: #f5f5f5;
 }
 
+/* Navbar Toggle (Menu Hamburguer) */
 .nav-hidden {
   display: none;
 }
@@ -105,6 +111,32 @@
 
   .navbar-toggler {
     margin-right: 1rem; /* Adiciona espaço entre a lupa e o menu hambúrguer */
+    border-color: transparent; /* Remove a borda */
+  }
+
+  .navbar-toggler-icon {
+    background-image: none; /* Remove qualquer imagem de fundo existente */
+    position: relative;
+  }
+
+  .navbar-toggler-icon::before,
+  .navbar-toggler-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 22px;
+    height: 2px;
+    background-color: white; /* Define a cor do ícone do menu hambúrguer */
+  }
+
+  .navbar-toggler-icon::before {
+    transform: translate(-50%, calc(-50% - 6px)); /* Linha superior */
+  }
+
+  .navbar-toggler-icon::after {
+    transform: translate(-50%, calc(-50% + 6px)); /* Linha inferior */
   }
 
   .navbar-collapse .navbar-nav {
@@ -126,12 +158,12 @@
     justify-content: flex-end;
     background: none;
   }
-  
+
   .navbar-collapse .navbar-nav {
     flex-direction: row;
     align-items: center;
   }
-  
+
   .search-bar {
     position: absolute;
     right: 0;
@@ -142,11 +174,11 @@
   .search-bar input {
     width: 300px;
   }
-  
+
   .d-md-none {
     display: none !important;
   }
-  
+
   .d-md-block {
     display: inline !important;
   }
