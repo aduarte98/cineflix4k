@@ -134,7 +134,7 @@ const Conteudo = () => {
                 id="videoIframe"
                 title={contentData.id}
                 src={iframeUrl}
-                scrolling="no"
+                scrolling={activeButton === 'option3' ? 'yes' : 'no'}
                 frameBorder="0"
                 allowFullScreen
                 width="100%"
