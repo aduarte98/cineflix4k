@@ -155,7 +155,7 @@ const Conteudo = () => {
                 <button
                   className='botao-Op'
                   id="option1"
-                  onClick={() => handleIframeChange(`https://superflixapi.dev/filme/${id}`, 'option1')}
+                  onClick={() => handleIframeChange(`https://superflixapi.link/filme/${id}`, 'option1')}
                 >
                   {activeButton === 'option1' && <img src={Seta} alt='img2' style={{ height: 30, marginRight: 30 }} />}
                   Player 1
@@ -215,7 +215,7 @@ const Conteudo = () => {
                 <button
                   className='botao-Op-Serie'
                   id="option1"
-                  onClick={() => handleIframeChange(`https://superflixapi.dev/serie/${id}`, 'option1')}
+                  onClick={() => handleIframeChange(`https://superflixapi.link/serie/${id}`, 'option1')}
                 >
                   {activeButton === 'option1' && <img src={Seta} alt='img9' style={{ height: 30, marginRight: 30 }} />}
                   Player 1
