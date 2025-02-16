@@ -60,6 +60,7 @@ const ConteudoAoVivo = () => {
                 allowFullScreen
                 width="100%"
                 height="360"
+                sandbox={"allow-scripts allow-same-origin allow-presentation"}
               ></iframe>
             ) : (
               <p style={{ color: 'white', padding: '200px 0 0 250px', fontSize: '30px' }}>Não há link disponível</p>
