@@ -203,7 +203,7 @@ const Conteudo = () => {
                 <button
                   className='botao-Op'
                   id="option7"
-                  onClick={() => handleIframeChange(`https://embed.warezcdn.net/filme/${imdbId}`, 'option7')}
+                  onClick={() => handleIframeChange(`https://embed.warezcdn.link/filme/${imdbId}`, 'option7')}
                 >
                   {activeButton === 'option7' && <img src={Seta} alt='img8' style={{ height: 30, marginRight: 30 }} />}
                   Player 7
@@ -239,7 +239,7 @@ const Conteudo = () => {
                 <button
                   className='botao-Op-Serie'
                   id="option4"
-                  onClick={() => handleIframeChange(`https://embed.warezcdn.net/serie/${imdbId}`, 'option4')}
+                  onClick={() => handleIframeChange(`https://embed.warezcdn.link/serie/${imdbId}`, 'option4')}
                 >
                   {activeButton === 'option4' && <img src={Seta} alt='img12' style={{ height: 30, marginRight: 30 }} />}
                   Player 4
